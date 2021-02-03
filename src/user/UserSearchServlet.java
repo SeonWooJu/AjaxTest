@@ -31,9 +31,9 @@ public class UserSearchServlet extends HttpServlet {
 		ArrayList<User> userList = userDAO.search(Name);
 		for(int i = 0; i < userList.size(); i++) {
 			result.append("[{\"value\": \"" + userList.get(i).getName() + "\"},");
-			result.append("{\"value\": \"" + userList.get(i).getName() + "\"},");
-			result.append("{\"value\": \"" + userList.get(i).getName() + "\"},");
-			result.append("{\"value\": \"" + userList.get(i).getName() + "\"}],");
+			result.append("{\"value\": \"" + userList.get(i).getAge() + "\"},");
+			result.append("{\"value\": \"" + userList.get(i).getGender() + "\"},");
+			result.append("{\"value\": \"" + userList.get(i).getEmail() + "\"}],");
 		}
 		result.append("]}");
 		return result.toString();
